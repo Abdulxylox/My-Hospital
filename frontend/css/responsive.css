@@ -1,0 +1,130 @@
+/* Responsive Design */
+
+/* Tablet View */
+@media (max-width: 1024px) {
+    .sidebar {
+        width: 200px;
+    }
+    
+    .main-content {
+        margin-left: 200px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+    .dashboard-container {
+        flex-direction: column;
+    }
+    
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        display: none;
+        z-index: 1000;
+    }
+    
+    .sidebar.mobile-open {
+        display: block;
+    }
+    
+    .main-content {
+        margin-left: 0;
+    }
+    
+    .top-bar {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .stats-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .search-section {
+        flex-direction: column;
+    }
+    
+    .login-card {
+        width: 90%;
+        padding: 30px 20px;
+    }
+    
+    .reports-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .patients-table {
+        font-size: 0.85em;
+    }
+    
+    .patients-table th,
+    .patients-table td {
+        padding: 8px;
+    }
+}
+
+/* Small Mobile */
+@media (max-width: 480px) {
+    body {
+        font-size: 14px;
+    }
+    
+    .login-card {
+        padding: 20px 15px;
+    }
+    
+    .login-card h1 {
+        font-size: 1.5em;
+    }
+    
+    .top-bar h1 {
+        font-size: 1.5em;
+    }
+    
+    .stat-card p {
+        font-size: 1.5em;
+    }
+    
+    .sidebar nav a {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+    
+    .user-info {
+        flex-direction: column;
+        gap: 5px;
+    }
+    
+    .user-info span {
+        width: 100%;
+        text-align: center;
+    }
+}
+
+/* Print Styles */
+@media print {
+    .sidebar,
+    .top-bar,
+    .search-section,
+    .filter-section,
+    #logoutBtn,
+    .btn-secondary {
+        display: none !important;
+    }
+    
+    .main-content {
+        margin-left: 0;
+        padding: 0;
+    }
+    
+    .dashboard-container {
+        margin: 0;
+        padding: 0;
+    }
+}
