@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports - My Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>🏥 My Hospital</h2>
+            <nav>
+                <a href="dashboard.html">📊 Dashboard</a>
+                <a href="patients.html">👥 Patients</a>
+                <a href="reports.html" class="active">📋 Reports</a>
+                <a href="#" id="logoutBtn">🚪 Logout</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="top-bar">
+                <h1>Reports</h1>
+                <div class="user-info">
+                    <span id="userName">User</span>
+                </div>
+            </div>
+            <div class="dashboard-content">
+                <div class="filter-section">
+                    <input type="date" id="filterDate">
+                    <select id="filterStatus">
+                        <option value="">All Status</option>
+                        <option value="completed">Completed</option>
+                        <option value="pending">Pending</option>
+                        <option value="failed">Failed</option>
+                    </select>
+                </div>
+                <div class="reports-grid" id="reportsGrid"></div>
+            </div>
+        </main>
+    </div>
+    <script src="js/reports.js"></script>
+</body>
+</html>
