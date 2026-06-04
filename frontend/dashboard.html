@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - My Hospital</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="dashboard-container">
+        <aside class="sidebar">
+            <h2>🏥 My Hospital</h2>
+            <nav>
+                <a href="dashboard.html" class="active">📊 Dashboard</a>
+                <a href="patients.html">👥 Patients</a>
+                <a href="reports.html">📋 Reports</a>
+                <a href="#" id="logoutBtn">🚪 Logout</a>
+            </nav>
+        </aside>
+        <main class="main-content">
+            <div class="top-bar">
+                <h1>Dashboard</h1>
+                <div class="user-info">
+                    <span id="userName">User</span>
+                    <span id="userRole">Role</span>
+                </div>
+            </div>
+            <div class="dashboard-content">
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <h3>Total Patients</h3>
+                        <p id="totalPatients">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Reports Generated</h3>
+                        <p id="totalReports">0</p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Active Cases</h3>
+                        <p id="activeCases">0</p>
+                    </div>
+                </div>
+                <div class="recent-reports">
+                    <h2>Recent Reports</h2>
+                    <div id="recentReports"></div>
+                </div>
+            </div>
+        </main>
+    </div>
+    <script src="js/dashboard.js"></script>
+</body>
+</html>
