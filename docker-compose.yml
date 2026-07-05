@@ -1,0 +1,28 @@
+version: '3.8'
+services:
+  mongo:
+    image: mongo:6.0
+    restart: unless-stopped
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+  app:
+    build: .
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+    environment:
+      - MONGO_URI=mongodb://mongo:27017/myhospital
+      - JWT_SECRET=change_this_to_a_long_random_secret
+      - SMTP_HOST=smtp.example.com
+      - SMTP_PORT=587
+      - SMTP_USER=
+      - SMTP_PASS=
+      - FROM_EMAIL=no-reply@myhospital.local
+      - BOOTSTRAP_ADMIN_EMAIL=admin@myhospital.local
+      - BOOTSTRAP_ADMIN_PASS=AdminPass123!
+    depends_on:
+      - mongo
+volumes:
+  mongo-data:
